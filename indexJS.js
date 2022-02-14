@@ -1,4 +1,4 @@
-var valR = document.getElementById("Rinput").value;
+var valR = document.getElementById("Rinput").innerHTML;
 function sliderValueR(valR) {
 	document.getElementById("Rinput").innerHTML = valR;
 }
