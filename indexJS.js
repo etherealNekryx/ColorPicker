@@ -1,29 +1,18 @@
-var R;
-var G;
-var B;
-var r;
-var g;
-var b;
-var Rval;
-var Gval;
-var Bval;
-var RGB;
 
-
-function calcualte() {
-  R = document.getElementById("Rinput").value;
-  G = document.getElementById("Ginput").value;
-  B = document.getElementById("Binput").value;
+function calculate() {
+  var R = document.getElementById("Rinput").value;
+  var G = document.getElementById("Ginput").value;
+  var B = document.getElementById("Binput").value;
   
-  RGB = R + G + B;
+  var RGB = R + G + B;
   
-  r = (1 / RGB) * R;
-  g = (1 / RGB) * G;
-  b = (1 / RGB) * B;
+  var r = (1 / RGB) * R;
+  var g = (1 / RGB) * G;
+  var b = (1 / RGB) * B;
   
-  Rval = document.getElementById("Rval");
-  Gval = document.getElementById("Gval");
-  Bval = document.getElementById("Bval");
+  var Rval = document.getElementById("Rval");
+  var Gval = document.getElementById("Gval");
+  var Bval = document.getElementById("Bval");
   
   Rval.innHTML = r;
   Gval.innerHTML = g;
