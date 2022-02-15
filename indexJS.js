@@ -6,6 +6,7 @@ function calculate() {
   var Rval = document.getElementById("Rval");
   var Gval = document.getElementById("Gval");
   var Bval = document.getElementById("Bval");
+  var currentColor = "rgb(" + R + ", " + G + ", " + B + ")";
   
   var RGB = +R + +G + +B;
   
@@ -17,5 +18,6 @@ function calculate() {
   Gval.innerHTML = g;
   Bval.innerHTML = b;
   
+  document.getElementById("colorDisplay").style.backgroundColor = currentColor;
   
 }
