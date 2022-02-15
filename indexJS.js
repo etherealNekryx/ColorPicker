@@ -1,26 +1,33 @@
-var colorPicker;
-var defaultColor = "#0000ff";
+var R;
+var G;
+var B;
+var r;
+var g;
+var b;
+var Rval;
+var Gval;
+var Bval;
+var RGB;
 
-window.addEventListener("load", startup, false);
 
-function startup() {
-  colorPicker = document.querySelector("#colorPicker");
-  colorPicker.value = defaultColor;
-
-  colorPicker.addEventListener("input", updateFirst, false);
-  colorPicker.addEventListener("change", watchColorPicker, false);
-}
-
-function updateFirst(event) {
-  var p = document.querySelector("p");
+function calcualte() {
+  R = document.getElementById("Rinput").value;
+  G = document.getElementById("Ginput").value;
+  B = document.getElementById("Binput").value;
   
-  if (p) {
-    p.style.color = event.target.value;
-  }
-}
-
-function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
-    p.style.color = event.target.value;
-  });
+  RGB = R + G + B;
+  
+  r = (1 / RGB) * R;
+  g = (1 / RGB) * G;
+  b = (1 / RGB) * B;
+  
+  Rval = document.getElementById("Rval");
+  Gval = document.getElementById("Gval");
+  Bval = document.getElementById("Bval");
+  
+  Rval.innHTML = r;
+  Gval.innerHTML = g;
+  Bval.innerHTML = b;
+  
+  
 }
